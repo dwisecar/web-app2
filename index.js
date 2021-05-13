@@ -76,7 +76,6 @@ app.get("/user", requiresAuth(), async (req, res) => {
     access_token: req.oidc && req.oidc.accessToken,
     refresh_token: req.oidc && req.oidc.refreshToken,
   });
-  console.log(id_token);
 });
 
 app.get("/expenses", requiresAuth(), async (req, res, next) => {
